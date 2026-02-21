@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 23rd Birthday Sayang ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fbc2c2 0%, #f8afaf 40%, #ffdde1 100%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart-float {
+            position: absolute;
+            color: rgba(255, 120, 120, 0.25);
+            font-size: 24px;
+            animation: float 8s infinite linear;
+            bottom: -10%;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0.2; }
+        }
+
+        .heart-float:nth-child(1) { left: 10%; animation-duration: 9s; font-size: 32px; }
+        .heart-float:nth-child(2) { left: 25%; animation-duration: 11s; font-size: 28px; }
+        .heart-float:nth-child(3) { left: 40%; animation-duration: 7s; font-size: 40px; }
+        .heart-float:nth-child(4) { left: 55%; animation-duration: 13s; font-size: 20px; }
+        .heart-float:nth-child(5) { left: 70%; animation-duration: 10s; font-size: 36px; }
+        .heart-float:nth-child(6) { left: 85%; animation-duration: 8s; font-size: 24px; }
+        .heart-float:nth-child(7) { left: 15%; animation-duration: 12s; font-size: 44px; }
+        .heart-float:nth-child(8) { left: 95%; animation-duration: 9.5s; font-size: 30px; }
+        .heart-float:nth-child(9) { left: 48%; animation-duration: 14s; font-size: 22px; }
+        .heart-float:nth-child(10) { left: 5%; animation-duration: 10.5s; font-size: 38px; }
+
+        .card {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 60px 60px 40px 40px;
+            box-shadow: 0 30px 60px rgba(255, 80, 80, 0.3);
+            padding: 40px 30px;
+            animation: fadeScale 1s ease-out;
+        }
+
+        @keyframes fadeScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 15px 25px rgba(255, 80, 120, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .greeting {
+            text-align: center;
+        }
+
+        .greeting h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #d44e5c, #f09b9b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .greeting h2 {
+            font-size: 2.2rem;
+            color: #a6364f;
+            font-weight: 600;
+            padding: 0 25px;
+            border-radius: 60px;
+            background: rgba(255, 245, 245, 0.6);
+        }
+
+        .age-23 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #d44e5c;
+        }
+
+        /* Section Title */
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 2rem;
+            color: #a1354b;
+            font-weight: 700;
+            background: rgba(255,220,220,0.5);
+            border-radius: 50px;
+            padding: 15px 25px;
+            margin: 40px 0 30px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* === BAGIAN UCAPAN PRIBADI (DARI SAYA SENDIRI) === */
+        .personal-message {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 60px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 20px 40px rgba(255, 100, 100, 0.2);
+            backdrop-filter: blur(5px);
+            border: 3px solid white;
+            position: relative;
+        }
+
+        .personal-message:before {
+            content: "❝";
+            font-size: 6rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            color: rgba(214, 79, 94, 0.2);
+            font-family: serif;
+        }
+
+        .personal-message:after {
+            content: "❞";
+            font-size: 6rem;
+            position: absolute;
+            bottom: -30px;
+            right: 20px;
+            color: rgba(214, 79, 94, 0.2);
+            font-family: serif;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #ffb6b6;
+            padding-bottom: 20px;
+        }
+
+        .heart-icon {
+            font-size: 3.5rem;
+            color: #d64f5e;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .message-header h3 {
+            font-size: 2.2rem;
+            color: #a1354b;
+            font-weight: 700;
+        }
+
+        .message-content {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: #59212b;
+            padding: 0 20px;
+        }
+
+        .message-content p {
+            margin-bottom: 25px;
+            text-indent: 40px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #b3465a;
+            border-top: 2px dashed #ffb6b6;
+            padding-top: 25px;
+        }
+
+        .signature i {
+            color: #d64f5e;
+        }
+
+        /* Galeri */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-item {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(255, 100, 100, 0.3);
+            aspect-ratio: 1;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Video */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            padding: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .video-wrapper video,
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Music player */
+        .music-player {
+            background: rgba(255, 230, 230, 0.7);
+            border-radius: 100px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            border: 2px solid white;
+        }
+
+        .music-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .music-info i {
+            font-size: 3rem;
+            color: #d64f5e;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        audio {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* 23 alasan */
+        .reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 30px 0;
+    }
+
+    .reason-card {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
+        padding: 18px 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 20px rgba(255, 120, 120, 0.15);
+        transition: all 0.25s ease;
+    }
+
+    .reason-card:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 25px rgba(214, 79, 94, 0.25);
+        border-color: #ffb6b6;
+    }
+
+    .reason-number {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        box-shadow: 0 5px 10px rgba(255, 100, 100, 0.3);
+        border: 2px solid white;
+    }
+
+    .reason-text {
+        color: #4a2a32;
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .reasons-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+        .btn {
+            background: linear-gradient(145deg, #ff6a88, #ff99ac);
+            border: none;
+            padding: 18px 40px;
+            border-radius: 60px;
+            font-size: 1.7rem;
+            color: white;
+            text-shadow: 2px 2px 0 #ce3f4e;
+            box-shadow: 0 20px 30px #fba0a0;
+            cursor: pointer;
+            border: 2px solid white;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn:hover {
+            transform: scale(1.07);
+        }
+
+        .surprise-btn {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .from-footer {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 3px dashed rgba(255, 255, 255, 0.8);
+            font-size: 1.6rem;
+            color: #ac2f4b;
+        }
+
+        @media (max-width: 600px) {
+            .greeting h1 { font-size: 2.4rem; }
+            .greeting h2 { font-size: 1.7rem; }
+            .personal-message { padding: 25px; }
+            .message-content { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+        <div class="heart-float"><i class="fas fa-heart"></i></div>
+    </div>
+
+    <main class="card">
+        <!-- Profile -->
+        <div class="profile-section">
+            <div class="avatar">
+                <img src="foto2.jpeg" alt="Foto Pacar" onerror="this.src='https://via.placeholder.com/300?text=Foto+Pacar'">
+            </div>
+            <div class="greeting">
+                <h1>🎉 HAPPY BIRTHDAY! 🎉</h1>
+                <h2>Untuk Rizkia Masila Febianti</h2>
+                <div class="age-23">
+                    23 <i class="fas fa-crown" style="color: #f6e05e;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== BAGIAN UCAPAN PRIBADI (DARI SAYA) ===== -->
+        <div class="personal-message">
+            <div class="message-header">
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Surat Cinta untukmu di Usia ke-23</h3>
+            </div>
+            <div class="message-content">
+                <p>Sayangku,</p>
+                <p>Selamat ulang tahun yang ke-23, cintaku. Hari ini adalah hari yang spesial karena 23 tahun yang lalu, malaikat kecil lahir ke dunia, dan aku sangat bersyukur bisa menjadi bagian dari hidupmu sekarang.</p>
+                <p>Di setiap detik bersamamu, aku belajar arti cinta yang sebenarnya. Kamu adalah alasan aku tersenyum, alasan aku bermimpi, dan alasan aku percaya bahwa kebahagiaan itu nyata. Terima kasih sudah menjadi pacar yang luar biasa, sahabat terbaik, dan rumah hatiku.</p>
+                <p>Semoga di usia 23 ini, semua impianmu tercapai. Aku akan selalu ada di sampingmu, mendukungmu, mencintaimu, dan menjagamu. Bersamamu, aku merasa lengkap.</p>
+                <p>Selamat ulang tahun, pacarku tercinta. Aku cinta kamu lebih dari apapun. ❤️</p>
+            </div>
+            <div class="signature">
+                <i class="fas fa-heart"></i> Dari yang selalu mencintaimu, <br>
+                <strong>P⭐7</strong>
+            </div>
+        </div>
+
+        <!-- Galeri Foto -->
+        <div class="gallery-section">
+            <div class="section-title">
+                <i class="fas fa-camera"></i> Galeri Kenangan Kita
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item"><img src="foto1.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+1'"></div>
+                <div class="photo-item"><img src="foto3.webp" onerror="this.src='https://via.placeholder.com/300?text=Foto+2'"></div>
+                <div class="photo-item"><img src="foto4.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+3'"></div>
+                <div class="photo-item"><img src="foto5.gif" onerror="this.src='https://via.placeholder.com/300?text=Foto+4'"></div>
+                <div class="photo-item"><img src="foto6.gif" onerror="this.src='https://via.placeholder.com/300?text=Foto+5'"></div>
+                <div class="photo-item"><img src="foto7.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+6'"></div>
+                <div class="photo-item"><img src="foto8.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+7'"></div>
+                <div class="photo-item"><img src="foto9.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+8'"></div>
+                <div class="photo-item"><img src="foto10.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+9'"></div>
+                <div class="photo-item"><img src="foto11.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+10'"></div>
+                <div class="photo-item"><img src="foto12.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+11'"></div>
+                <div class="photo-item"><img src="foto13.jpeg" onerror="this.src='https://via.placeholder.com/300?text=Foto+12'"></div>
+            </div>
+        </div>
+
+        <!-- Video Spesial -->
+        <div class="video-section">
+            <div class="section-title">
+                <i class="fas fa-video"></i> Video Spesial Buat Kamu
+            </div>
+            <div class="video-container">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls poster="thumbnail.jpg">
+                            <source src="vid2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-title">Video Spesial dari Aku</div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls poster="thumbnail.jpg">
+                            <source src="vid1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-title">Video Spesial dari Aku</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Musik Player -->
+        <div class="music-section">
+            <div class="section-title">
+                <i class="fas fa-headphones"></i> Lagu Spesial
+            </div>
+            <div class="music-player">
+                <div class="music-info">
+                    <i class="fas fa-compact-disc"></i>
+                    <div>
+                        <h3 style="color:#a1354b;">Lagu Untukmu</h3>
+                        <p style="color:#b85c6a;">Putar dan rasakan cintaku</p>
+                    </div>
+                </div>
+                <audio controls loop>
+                    <source src="everything u are.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- 23 Alasan Cinta -->
+        <div class="section-title">
+            <i class="fas fa-heart"></i> 23 Alasan Aku Cinta Kamu
+        </div>
+        <div class="reasons-container">
+                <!-- Alasan 1-5 -->
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <div class="reason-text">Cara kamu memperhatikan detail kecil</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <div class="reason-text">Kamu selalu tahu cara membuatku tenang</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <div class="reason-text">Kamu support setiap keputusanku</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <div class="reason-text">Kamu nggak pernah bandingin aku dengan orang lain</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">05</div>
+                    <div class="reason-text">Cara kamu menghadapi masalah dengan kepala dingin</div>
+                </div>
+                
+                <!-- Alasan 6-10 -->
+                <div class="reason-card">
+                    <div class="reason-number">06</div>
+                    <div class="reason-text">Kamu bisa jadi tempat curhat terbaik</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">07</div>
+                    <div class="reason-text">Kamu selalu ingat hal-hal kecil yang aku ceritakan</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">08</div>
+                    <div class="reason-text">Kamu menerima kekurangan aku apa adanya</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">09</div>
+                    <div class="reason-text">Kamu nggak pernah maksa aku jadi orang lain</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">10</div>
+                    <div class="reason-text">Kamu selalu jujur meskipun kadang sakit buat didenger</div>
+                </div>
+                
+                <!-- Alasan 11-15 -->
+                <div class="reason-card">
+                    <div class="reason-number">11</div>
+                    <div class="reason-text">Kamu ngerti kalau aku lagi sibuk atau capek</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">12</div>
+                    <div class="reason-text">Kamu selalu ada pas aku butuh</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">13</div>
+                    <div class="reason-text">Kamu nggak gampang marah dan selalu sabar</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">14</div>
+                    <div class="reason-text">Kamu punya cara sendiri buat bikin aku semangat lagi</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">15</div>
+                    <div class="reason-text">Kamu tanggung jawab sama apa yang kamu ucapkan</div>
+                </div>
+                
+                <!-- Alasan 16-20 -->
+                <div class="reason-card">
+                    <div class="reason-number">16</div>
+                    <div class="reason-text">Kamu punya prinsip hidup yang jelas</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">17</div>
+                    <div class="reason-text">Kamu selalu berusaha jadi pribadi yang lebih baik</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">18</div>
+                    <div class="reason-text">Kamu respect sama temen-temen dan keluargaku</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">19</div>
+                    <div class="reason-text">Kamu bisa diajak diskusi serius dengan dewasa</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">20</div>
+                    <div class="reason-text">Kamu nggak egois dan selalu mikirin perasaanku</div>
+                </div>
+                
+                <!-- Alasan 21-23 -->
+                <div class="reason-card">
+                    <div class="reason-number">21</div>
+                    <div class="reason-text">Kamu selalu jaga omongan dan sikap di depan orang lain</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">22</div>
+                    <div class="reason-text">Kamu bisa diandalkan dalam situasi apapun</div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">23</div>
+                    <div class="reason-text">Kamu bikin aku pengen jadi versi terbaik diriku</div>
+                </div>
+            </div>
+
+        <!-- Tombol Kejutan -->
+        <div class="surprise-btn">
+            <button class="btn" onclick="tampilkanKejutan()">
+                <i class="fas fa-gift"></i> Kejutan Spesial! <i class="fas fa-gift"></i>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="from-footer">
+            <span>❤️ I love you more than anything ❤️</span>
+        </div>
+    </main>
+
+    <script>
+        function tampilkanKejutan() {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.background = 'rgba(255, 140, 140, 0.9)';
+            overlay.style.backdropFilter = 'blur(6px)';
+            overlay.style.zIndex = '9999';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.cursor = 'pointer';
+
+            overlay.innerHTML = `
+                <div style="background: white; border-radius: 50px; padding: 40px; max-width: 500px; text-align: center;">
+                    <i class="fas fa-heart" style="font-size: 70px; color: #e63946; animation: pulse 1s infinite;"></i>
+                    <h2 style="color:#b62b44; font-size: 2.5rem; margin: 20px 0;">HAPPY 23rd BIRTHDAY!</h2>
+                    <p style="font-size: 1.5rem; color:#b1324a;">Kamu adalah hadiah terindah</p>
+                    <p style="font-size: 1.5rem; color:#b1324a;">Yang pernah aku miliki</p>
+                    <p style="font-size: 2rem; margin: 20px 0;">❤️❤️❤️</p>
+                    <button style="background:#ff889f; border:none; padding:15px 40px; border-radius:40px; font-size:1.3rem; color:white; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">Tutup</button>
+                </div>
+            `;
+            
+            overlay.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'BUTTON') overlay.remove();
+            });
+            
+            document.body.appendChild(overlay);
+        }
+    </script>
+</body>
+</html>
